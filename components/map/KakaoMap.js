@@ -30,7 +30,7 @@ const KakaoMap = (props) => {
       <Script src={KAKAO_SDK_URL} strategy="beforeInteractive" />
       <Map // 지도를 표시할 Container
         center={{ lat: 37.5665734, lng: 126.978179 }} //지도의 중심좌표, 현재 서울시청 기준
-        style={{ width: "100%", height: "600px" }}
+        style={{ width: "100%", height: "100vh" }}
         level={5}
       >
         {shopData.map((position, index) => (
