@@ -28,6 +28,7 @@ export default function Home() {
         <meta name="description" content="we loved all dessert!" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
       </Head>
       <section>
         <div className="w-full h-[400px] bg-[#333] rounded-2xl relative">

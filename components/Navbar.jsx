@@ -2,8 +2,8 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <header className="text-gray-600 body-font">
-      <div className="max-w-[1280px] w-[90%] 2xl:w-full mx-auto flex flex-wrap py-5 flex-col md:flex-row items-center">
+    <header className="fixed top-0 left-0 z-[2] w-full bg-white shadow-sm h-[70px] flex items-center">
+      <div className="w-[96%] mx-auto flex flex-wrap flex-col md:flex-row items-center">
         <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
           <h1 className="text-xl font-bold">사이트 이름</h1>
         </a>

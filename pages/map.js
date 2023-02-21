@@ -3,13 +3,15 @@ import axios from "axios";
 
 import KaKaoMap from "../components/map/KakaoMap";
 import MapList from "../components/map/MapList";
+import Detail from "../components/map/Detail";
 
 const Map = ({ data }) => {
   return (
     <div className="flex ">
       <main className="absolute w-screen h-screen left-0 top-0">
         <KaKaoMap data={data} />
-        <MapList/>
+        {/* <MapList /> */}
+        <Detail />
       </main>
     </div>
   );
