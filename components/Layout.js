@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
     <>
       <Navbar />
       <section className="text-gray-600 body-font">
-        <div className="max-w-[1280px] w-[90%] 2xl:w-full mx-auto">{children}</div>
+        <div className="w-full mx-auto">{children}</div>
       </section>
       <Footer />
     </>
