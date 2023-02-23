@@ -6,12 +6,16 @@ import MapList from "../components/map/MapList";
 import Detail from "../components/map/Detail";
 
 const Map = ({ data }) => {
+  console.log("데이터", data);
+
+
+
   return (
     <div className="flex ">
       <main className="absolute w-screen h-screen left-0 top-0">
         <KaKaoMap data={data} />
-        {/* <MapList /> */}
-        <Detail />
+        {/* <Detail /> */}
+        <MapList data={data} />
       </main>
     </div>
   );

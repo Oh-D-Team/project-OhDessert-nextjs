@@ -21,9 +21,14 @@ const KakaoMap = (props) => {
   });
 
   useEffect(() => {
-    console.log("props", props.data.products);
     setShopData(props.data.products);
   });
+
+  useEffect(() => {
+    console.log("지도의 props입니다.", props.data.products);
+  },[]);
+
+  
 
   return (
     <>
@@ -34,10 +39,9 @@ const KakaoMap = (props) => {
         level={5}
       >
         {shopData.map((position, index) => (
-          <>
+          <div key={`${position.title}-${position.latitude}`}>
             {/* {console.log("포지션", position)} */}
             <MapMarker // 마커를 생성합니다
-              key={`${position.title}-${position.latitude}`}
               position={{
                 // 마커가 표시될 위치입니다
                 lat: position.lat,
@@ -77,7 +81,7 @@ const KakaoMap = (props) => {
             </CustomOverlayMap>
 
             {/* {isOpen ? <Overlay data={position}></Overlay> : <></>} */}
-          </>
+          </div>
         ))}
         {/* {isOpen ? <Overlay data={markerData}></Overlay> : <></>} */}
       </Map>
