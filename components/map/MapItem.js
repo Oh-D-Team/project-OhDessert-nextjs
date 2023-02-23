@@ -2,7 +2,7 @@ import { set } from "mongoose";
 import { useState, useEffect } from "react";
 
 import Detail from "./Detail";
-import Test from "./Test";
+
 
 
 const MapItem = (props) => {

@@ -12,7 +12,7 @@ const Map = ({ data }) => {
 
   return (
     <div className="flex ">
-      <main className="absolute w-screen h-screen left-0 top-0">
+      <main className="absolute w-screen h-screen left-0 top-0 overflow-hidden">
         <KaKaoMap data={data} />
         {/* <Detail /> */}
         <MapList data={data} />
