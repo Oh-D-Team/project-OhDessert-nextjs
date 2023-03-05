@@ -18,6 +18,10 @@ const ProductSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
+    open: {
+      type: String,
+      required: true,
+    },
   },
   { timestamps: true }
 );
