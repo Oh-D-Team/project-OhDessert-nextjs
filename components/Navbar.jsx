@@ -21,14 +21,13 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 z-[2] w-full bg-white shadow-md h-[120px] sm:h-[80px] flex items-center px-5">
       <div className="w-full mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <Link href="/">
-          <h1 className="ml-0 h-10 sm:h-11">
-            <Logo />
+          <h1 className="ml-0">
+            <Logo className="h-10 sm:h-11" />
           </h1>
         </Link>
 
         {/* pc header start */}
         <nav className="md:mr-[40px] text-base md:text-lg justify-center font-[600]">
-          {console.log}
           <ul className="flex flex-wrap items-center gap-[27px] min-[400px]:gap-10 min-[500px]:gap-14 sm:gap-10 md:gap-[60px] xl:gap-[80px] text-lg">
             <NavBarList>Home</NavBarList>
             <Link href="/map">
