@@ -1,10 +1,10 @@
 @tailwind base;
 
 @layer base {
-    html {
-        font-family: 'Noto Sans KR';
-        letter-spacing: -0.025em;
-    }
+  html {
+    font-family: "Noto Sans KR";
+    letter-spacing: -0.025em;
+  }
 }
 
 @tailwind components;
