@@ -11,13 +11,18 @@ const CurationDetail = ({ data }) => {
   const [curationData, setCurationData] = useState([]);
   const [shopData, setShopData] = useState([]);
 
+  let url = shopData.contect;
+
+  console.log("url", url);
+
   useEffect(() => {
     setCurationData(data.data[0]);
     setShopData([data.data[0].shop1, data.data[0].shop2]);
   }, []);
 
-  console.log("data", curationData);
-  console.log("이야", shopData);
+  const handleOpenNewTab = (url) => {
+    window.open(url, "_blank", "noopener, noreferrer");
+  };
 
   return (
     <>
@@ -86,9 +91,11 @@ const CurationDetail = ({ data }) => {
                   </dl>
                   <dl className="flex text-lg">
                     <dt className="w-[80px] font-bold text-black">사이트</dt>
-                    <dd className="w-[calc(100%-80px)] underline">
-                      {item.contact}
-                    </dd>
+                    <button onClick={() => handleOpenNewTab(item.contact)}>
+                      <dd className="w-[calc(100%-80px)] underline">
+                        {item.contact}
+                      </dd>
+                    </button>
                   </dl>
                 </div>
               </div>
