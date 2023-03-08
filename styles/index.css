@@ -129,6 +129,7 @@
     padding-top: 134%;
     overflow: hidden;
     border-radius: 16px;
+    cursor: pointer;
 }
 
 .mySwiper3 {

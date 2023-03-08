@@ -116,6 +116,7 @@ const CurationList = () => {
               1280.1: {
                 slidesPerView: 1,
                 slidesOffsetAfter: 0,
+                autoplay: false,
               },
             }}
             modules={[

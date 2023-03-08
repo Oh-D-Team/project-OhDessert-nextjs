@@ -40,6 +40,7 @@ const Curation = ({ data }) => {
           {dataArray &&
             dataArray.map((item) => (
               <div
+                className="cursor-pointer"
                 key={item.title}
                 onClick={() =>
                   router.push({

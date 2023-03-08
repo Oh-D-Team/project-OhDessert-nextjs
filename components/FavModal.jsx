@@ -65,7 +65,7 @@ const FavModal = (props) => {
           <div className="flex flex-col gap-4">
             <SubTitle>상세 정보</SubTitle>
             <div className="flex gap-5 max-[640px]:flex-col">
-              <div className="bg-[#ccc] w-[50%] h-auto rounded-lg flex items-center justify-center border border-[#ededed] max-[640px]:w-full max-[640px]:h-[180px]">
+              <div className="bg-[#ccc] w-[50%] h-[240px] rounded-lg flex items-center justify-center border border-[#ededed] max-[640px]:w-full max-[640px]:h-[180px]">
                 {/* // 지도를 표시할 Container 지도의 중심좌표, 현재 서울시청 기준 */}
                 <Map // 지도를 표시할 Container
                   center={{
