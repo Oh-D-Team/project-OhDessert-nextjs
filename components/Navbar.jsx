@@ -33,7 +33,9 @@ const Navbar = () => {
             <Link href="/map">
               <NavBarList>Find</NavBarList>
             </Link>
-            <NavBarList>Curation</NavBarList>
+            <Link href="/curation">
+              <NavBarList>Curation</NavBarList>
+            </Link>
             <NavBarList>Contact</NavBarList>
           </ul>
         </nav>
