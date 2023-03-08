@@ -21,88 +21,51 @@ const FavAddress = tw.span`
 `;
 
 const Slide = ({ data }) => {
-  const [slideArray, setSlideArray] = useState([]);
+  const [slideImg, setSlideImg] = useState({});
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   useEffect(() => {
-    console.log("데이터 입니다. ", data);
-    setSlideArray(data);
+    setSlideImg({ img: data.img });
   }, []);
 
-  console.log("슬라이드 어레이 출력", slideArray);
+  console.log("슬라이드 어레이 출력", data.img);
+  console.log("슬라이드 어레이 출력", slideImg);
 
   return (
     <div className="flex items-start gap-6 mt-[60px]">
       <Swiper
-        navigation={true}
+        onSwiper={setThumbsSwiper}
         spaceBetween={20}
-        slidesPerView={1.5}
-        freeMode={true}
+        slidesPerView={4}
+        slidesPerGroup={1}
+        watchSlidesProgress={true}
         scrollbar={true}
-        observer={true}
-        observeParents={true}
-        slidesOffsetAfter={20}
+        navigation={true}
+        pagination={{
+          type: "fraction",
+        }}
         autoplay={{
           delay: 4000,
           disableOnInteraction: false,
         }}
-        pagination={{
-          type: "fraction",
-        }}
-        breakpoints={{
-          600.1: {
-            slidesPerView: 2,
-            slidesOffsetAfter: 0,
-          },
-          900.1: {
-            slidesPerView: 3,
-            slidesOffsetAfter: 0,
-          },
-        }}
-        modules={[FreeMode, Scrollbar, Autoplay, Pagination, Navigation]}
-        className="mySwiper3"
+        modules={[
+          Scrollbar,
+          Autoplay,
+          Pagination,
+          FreeMode,
+          Navigation,
+          Thumbs,
+        ]}
+        className="mySwiper"
       >
-        <SwiperSlide>
-          <img src="/img/fav01.jpeg" />
-          <FavText>
-            <p>허니드로우</p>
-            <FavAddress>서울 서대문구</FavAddress>
-          </FavText>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/img/fav01.jpeg" />
-          <FavText>
-            <p>허니드로우</p>
-            <FavAddress>서울 서대문구</FavAddress>
-          </FavText>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/img/fav01.jpeg" />
-          <FavText>
-            <p>허니드로우</p>
-            <FavAddress>서울 서대문구</FavAddress>
-          </FavText>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/img/fav01.jpeg" />
-          <FavText>
-            <p>허니드로우</p>
-            <FavAddress>서울 서대문구</FavAddress>
-          </FavText>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/img/fav01.jpeg" />
-          <FavText>
-            <p>허니드로우</p>
-            <FavAddress>서울 서대문구</FavAddress>
-          </FavText>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/img/fav01.jpeg" />
-          <FavText>
-            <p>허니드로우</p>
-            <FavAddress>서울 서대문구</FavAddress>
-          </FavText>
-        </SwiperSlide>
+        {slideImg && (
+          <SwiperSlide>
+            <img src={slideImg.img} />
+          </SwiperSlide>
+        )}
+        {/* <SwiperSlide>
+          <img src={slideArray.img} />
+        </SwiperSlide> */}
       </Swiper>
     </div>
   );
