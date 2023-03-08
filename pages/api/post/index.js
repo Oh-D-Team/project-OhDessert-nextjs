@@ -9,10 +9,7 @@ export default async function handler(req, res) {
   //
   if (method === "GET") {
     try {
-      let data = await Curation.find({});
-      // .populate("shop1")
-      // .populate("shop2")
-      // .exec();
+      let data = await Curation.find({}).sort({ contentId: 1 });
       res.status(200).json({ data });
     } catch (err) {
       res.status(500).json(err);
