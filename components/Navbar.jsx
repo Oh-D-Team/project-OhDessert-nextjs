@@ -18,7 +18,7 @@ const Navbar = () => {
   // };
 
   return (
-    <header className="fixed top-0 left-0 z-[2] w-full bg-white shadow-md h-[120px] sm:h-[80px] flex items-center px-5">
+    <header className="sticky top-0 left-0 z-[2] w-full bg-white shadow-md h-[120px] sm:h-[80px] flex items-center px-5">
       <div className="w-full mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <Link href="/">
           <h1 className="ml-0">

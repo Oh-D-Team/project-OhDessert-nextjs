@@ -8,7 +8,7 @@ import tw from "tailwind-styled-components";
 import Masonry from "react-masonry-css";
 
 const ItemTitle = tw.h3`
-    text-[22px] font-bold mt-6 sm:text-2xl
+    text-[22px] font-bold mt-6 sm:text-2xl text-black
 `;
 
 const Curation = ({ data }) => {

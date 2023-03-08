@@ -6,7 +6,7 @@ const Overlay = (props) => {
       <div className="info">
         <div
           className="px-4 py-3 shadow-lg text-sm bg-[#F53354] relative font-medium text-center
-         text-white rounded-full after:'' after:w-0 after:h-0 after:border-8 after:border-[#F53354] 
+         text-white rounded-full after:'' after:w-0 after:h-0 after:border-[9px] after:border-[#F53354] 
          after:absolute after:-bottom-4 after:left-1/2 after:translate-x-[-50%] after:border-r-transparent after:border-b-transparent after:border-l-transparent"
         >
           {props.data.title}

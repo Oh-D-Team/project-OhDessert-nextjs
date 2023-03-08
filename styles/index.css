@@ -238,7 +238,11 @@
 .mySwiper4 .swiper-button-prev.swiper-button-disabled {
     opacity: 0.6;
 }
-    
+
+label.checked {
+    color: #fff;
+    background-color: #F53354;
+}
 
 @media screen and (max-width: 1280px) {
     .mySwiper {

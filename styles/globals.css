@@ -2,8 +2,9 @@
 
 @layer base {
   html {
-    font-family: "Noto Sans KR";
+    font-family: "Poppins", "Noto Sans KR";
     letter-spacing: -0.025em;
+    line-height: 1.5;
   }
 }
 

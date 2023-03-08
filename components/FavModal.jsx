@@ -45,7 +45,11 @@ const FavModal = (props) => {
 
   return (
     <>
-      <ModalBg></ModalBg>
+      <ModalBg  
+        onClick={() => {
+          setModalState(false);
+        }}>  
+      </ModalBg>
       <div className="max-w-[760px] w-[90%] bg-white fixed top-1/2 left-1/2 -translate-x-1/2 overflow-hidden -translate-y-1/2 z-[4] rounded-2xl max-[640px]:w-full max-[640px]:h-screen max-[640px]:rounded-none overflow-y-auto flex flex-col">
         <div className="w-full px-10 py-6 border-b border-[#ddd] bg-white flex items-center justify-between max-[640px]:sticky max-[640px]:top-0 max-[640px]:h-[70px] max-[640px]:px-5 max-[640px]:py-4">
           <h2 className="text-xl text-black font-bold">{data.title}</h2>
@@ -72,7 +76,7 @@ const FavModal = (props) => {
                   style={{
                     // 지도의 크기
                     width: "100%",
-                    height: "450px",
+                    height: "100%",
                   }}
                   level={4} // 지도의 확대 레벨
                 >
@@ -107,7 +111,7 @@ const FavModal = (props) => {
                       <p>휴무 {data.close}</p>
                     </InfoList>
                   </ul>
-                  <ul className="flex gap-2">
+                  <ul className="flex gap-2 flex-wrap">
                     {keyArray &&
                       keyArray.map((item) => (
                         <Keyword key={item}># {item}</Keyword>

@@ -15,14 +15,18 @@ const SecTitle = tw.span`
 const SecSubTitle = tw.span`
   text-xl text-[#666] mt-2 max-[640px]:text-lg
 `;
-
-const FavKeyword = tw.button`
-  w-[120px] h-12 bg-white border border-[#ddd] text-lg rounded-full text-center p-2 text-[#666] max-[900px]:text-base max-[900px]:w-[90px] max-[900px]:h-10 max-[900px]:h-10
+const FavKeywordLabel = tw.label`
+  w-[120px] h-12 bg-white border border-[#ddd] text-lg rounded-full text-center p-2 text-[#666] max-[900px]:text-base max-[900px]:w-[90px] max-[900px]:h-10 max-[900px]:h-10 aria-checked:border-[#F53354] flex items-center justify-center cursor-pointer
 `;
+const FavKeywordInput = tw.input` 
+  hidden
+`
 
 const CardList = () => {
   const [typeState, setTypeState] = useState();
   const [cardData, setcardData] = useState(null);
+  const [checkedInput, setCheckedInput] = useState("");
+
 
   const types = [
     {
@@ -75,8 +79,14 @@ const CardList = () => {
     );
   };
 
+  const handleClickRadioButton = (e) => {
+    // console.log("타겟", e.target.value)
+    setCheckedInput(e.target.value)
+    // setCheckedInput(e.target.checkedInput)
+  }
+
   return (
-    <>
+      <>
       <section className="py-[150px] bg-[#FAF6FF]">
         <div className="max-w-[1280px] w-[90%] mx-auto max-[600px]:w-[95%] max-[600px]:mr-0">
           <div className="flex flex-col items-center gap-1 max-[900px]:items-start max-[600px]:w-[95%]">
@@ -86,18 +96,28 @@ const CardList = () => {
             </SecSubTitle>
           </div>
           <div className="mt-8 flex flex-wrap gap-4 justify-center max-[900px]:justify-start max-[900px]:gap-2 max-[600px]:w-[95%]">
-            {types.map((item) => (
-              <div key={item.title}>
-                {" "}
-                <FavKeyword
-                  onClick={() => {
-                    setTypeState(item.title);
-                  }}
-                >
+          {types.map(item => (
+            <FavKeywordLabel 
+              key={item.num}
+              className={`${checkedInput === `${item.title}` ? "checked" : ""}`}
+            >
+              {/* {" "} */}
+              <FavKeywordInput
+                type="radio"
+                name="keyword"
+                value={item.title}
+                id="checkKeyword"
+                defaultChecked={checkedInput === `${item.title}`}
+                onChange={handleClickRadioButton}
+                onClick={() => {
+                  setTypeState(item.title);
+                }}
+              />
+                {/* <label htmlFor="checkKeyword"> */}
                   {item.title}
-                </FavKeyword>
-              </div>
-            ))}
+                {/* </label> */}
+            </FavKeywordLabel>
+          ))}
           </div>
           <CardItem data={cardData}></CardItem>
         </div>
