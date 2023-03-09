@@ -74,17 +74,23 @@ const CurationDetail = ({ data }) => {
               <div className="flex flex-col gap-[60px]">
                 <p className="mt-[60px]">{item.cura}</p>
                 <div className="flex flex-col gap-4">
-                  <dl className="flex text-lg">
+                  <dl className="flex text-lg gap-2">
                     <dt className="w-[80px] font-bold text-black">주소</dt>
                     <dd className="w-[calc(100%-80px)]">{item.address}</dd>
                   </dl>
-                  <dl className="flex text-lg">
+                  <dl className="flex text-lg gap-2">
                     <dt className="w-[80px] font-bold text-black">운영 시간</dt>
                     <dd className="w-[calc(100%-80px)]">
-                      {item.open} | 휴무 {item.close}
+                      {item.open}
                     </dd>
                   </dl>
-                  <dl className="flex text-lg">
+                  <dl className="flex text-lg gap-2">
+                    <dt className="w-[80px] font-bold text-black">휴무일</dt>
+                    <dd className="w-[calc(100%-80px)]">
+                      휴무 {item.close}
+                    </dd>
+                  </dl>
+                  <dl className="flex text-lg gap-2">
                     <dt className="w-[80px] font-bold text-black">사이트</dt>
                     <dd className="w-[calc(100%-80px)] underline">
                       {item.contact}

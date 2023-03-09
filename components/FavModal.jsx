@@ -16,6 +16,10 @@ import Close from "../public/close.svg";
 import Pin from "../public/pin.svg";
 import Time from "../public/time.svg";
 import Date from "../public/date.svg";
+import Lettering from "../public/lettering.svg";
+import Retro from "../public/retro.svg";
+import Friend from "../public/friend.svg";
+import Anniversary from "../public/anniversary.svg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
@@ -45,12 +49,12 @@ const FavModal = (props) => {
 
   return (
     <>
-      <ModalBg  
+      <ModalBg
         onClick={() => {
           setModalState(false);
-        }}>  
+        }}>
       </ModalBg>
-      <div className="max-w-[760px] w-[90%] bg-white fixed top-1/2 left-1/2 -translate-x-1/2 overflow-hidden -translate-y-1/2 z-[4] rounded-2xl max-[640px]:w-full max-[640px]:h-screen max-[640px]:rounded-none overflow-y-auto flex flex-col">
+      <div className="max-w-[760px] h-[800px] w-[90%] bg-white fixed top-1/2 left-1/2 -translate-x-1/2 overflow-hidden -translate-y-1/2 z-[4] rounded-2xl max-[640px]:w-full max-[640px]:h-screen max-[640px]:rounded-none overflow-y-auto flex flex-col">
         <div className="w-full px-10 py-6 border-b border-[#ddd] bg-white flex items-center justify-between max-[640px]:sticky max-[640px]:top-0 max-[640px]:h-[70px] max-[640px]:px-5 max-[640px]:py-4">
           <h2 className="text-xl text-black font-bold">{data.title}</h2>
           <button
@@ -65,7 +69,7 @@ const FavModal = (props) => {
           <div className="flex flex-col gap-4">
             <SubTitle>상세 정보</SubTitle>
             <div className="flex gap-5 max-[640px]:flex-col">
-              <div className="bg-[#ccc] w-[50%] h-[240px] rounded-lg flex items-center justify-center border border-[#ededed] max-[640px]:w-full max-[640px]:h-[180px]">
+              <div className="bg-[#ccc] w-[50%] h-[200px] rounded-lg flex items-center justify-center border border-[#ededed] max-[640px]:w-full max-[640px]:h-[180px] overflow-hidden">
                 {/* // 지도를 표시할 Container 지도의 중심좌표, 현재 서울시청 기준 */}
                 <Map // 지도를 표시할 Container
                   center={{
@@ -122,6 +126,41 @@ const FavModal = (props) => {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="flex flex-col gap-4">
+            <SubTitle>저희 가게 케이크는요</SubTitle>
+            <Swiper
+              slidesPerView={2}
+              spaceBetween={12}
+              navigation={true}
+              breakpoints={{
+                500.1: {
+                  slidesPerView: 3,
+                },
+                800.1: {
+                  slidesPerView: 4,
+                },
+              }}
+              modules={[Navigation]}
+              className="mySwiper6"
+            >
+              <SwiperSlide>
+                <Lettering />
+                <p className="text-center">나만의 특별한<br />레터링 케이크</p>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Retro />
+                <p className="text-center">레트로 무드가<br />느껴지는 케이크</p>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Friend />
+                <p className="text-center">친구 생일 선물로<br />좋은 케이크</p>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Anniversary />
+                <p className="text-center">특별한 기념일을 <br />만들어 주는 케이크</p>
+              </SwiperSlide>
+            </Swiper>
           </div>
           <div className="flex flex-col gap-4">
             <SubTitle>업체 사진</SubTitle>

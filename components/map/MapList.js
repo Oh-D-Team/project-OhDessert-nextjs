@@ -22,7 +22,7 @@ const MapList = (props) => {
 
   return (
     <>
-      <section className="bg-white w-full h-[46%] bottom-0 sm:w-[420px] sm:h-[calc(100vh-80px)] fixed left-0 z-[1] drop-shadow-lg overflow-y-auto">
+      <section className="bg-white w-full h-[46%] bottom-0 sm:w-[420px] sm:h-[calc(100vh-80px)] fixed left-0 z-[1] drop-shadow-lg overflow-y-auto scrollbar-thin scrollbar-thumb-[#ccc] scrollbar-track-[#ededed] scrollbar-thumb-rounded-full">
         <div className="p-5 border-b-8 border-[#f5f5f5]">
           <form className="relative">
             <input
