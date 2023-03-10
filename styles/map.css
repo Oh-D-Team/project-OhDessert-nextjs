@@ -1,3 +1,15 @@
+/* MapList */
+.keywordBtn[aria-expanded="true"] svg {
+    transform: rotate(180deg);
+}
+
+.mapListChecked {
+    background: #F53354;
+    border: none;
+    color: #fff;
+}
+
+/* DetailModal */
 .mySwiper6  {
     width: 100%;
 }

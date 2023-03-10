@@ -37,7 +37,7 @@ const CurationDetail = ({ data }) => {
           <img src={curationData.img} className="w-full h-full object-cover" />
         </div>
         <div className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] text-white max-w-[1280px] w-[90%] mx-auto z-[1] flex flex-col gap-6">
-          <h2 className="text-5xl font-bold leading-snug">
+          <h2 className="text-5xl max-[640px]:text-4xl max-[640px]:leading-normal font-bold leading-snug">
             {curationData.title}
             <br />
             {curationData.sub}
@@ -45,7 +45,7 @@ const CurationDetail = ({ data }) => {
           <p className="text-xl opacity-60">2023.02.27</p>
         </div>
       </section>
-      <section className="max-w-[1060px] w-[85%] mx-auto leading-loose mt-[100px] mb-[150px] text-base sm:text-xl sm:leading-loose text-[#333]">
+      <section className="max-w-[1060px] w-[85%] mx-auto leading-loose mt-[100px] mb-[150px] text-lg sm:text-xl sm:leading-loose text-[#333]">
         <div className="font-medium">
           <p>{curationData.desc}</p>
         </div>
@@ -79,23 +79,23 @@ const CurationDetail = ({ data }) => {
               <div className="flex flex-col gap-[60px]">
                 <p className="mt-[60px]">{item.cura}</p>
                 <div className="flex flex-col gap-4">
-                  <dl className="flex text-lg gap-2">
+                  <dl className="flex text-lg max-[640px]:text-base gap-2">
                     <dt className="w-[80px] font-bold text-black">주소</dt>
                     <dd className="w-[calc(100%-80px)]">{item.address}</dd>
                   </dl>
-                  <dl className="flex text-lg gap-2">
+                  <dl className="flex text-lg max-[640px]:text-base gap-2">
                     <dt className="w-[80px] font-bold text-black">운영 시간</dt>
                     <dd className="w-[calc(100%-80px)]">
                       {item.open}
                     </dd>
                   </dl>
-                  <dl className="flex text-lg gap-2">
+                  <dl className="flex text-lg max-[640px]:text-base gap-2">
                     <dt className="w-[80px] font-bold text-black">휴무일</dt>
                     <dd className="w-[calc(100%-80px)]">
                       휴무 {item.close}
                     </dd>
                   </dl>
-                  <dl className="flex text-lg gap-2">
+                  <dl className="flex text-lg max-[640px]:text-base gap-2">
                     <dt className="w-[80px] font-bold text-black">사이트</dt>
                     <button onClick={() => handleOpenNewTab(item.contact)}>
                       <dd className="w-[calc(100%-80px)] underline">

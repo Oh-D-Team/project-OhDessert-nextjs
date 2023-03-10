@@ -72,7 +72,7 @@ export default function Home() {
           />
         </div>
         <div className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] text-white max-w-[1280px] w-[90%] mx-auto max-[640px]:top-[60px] max-[640px]:translate-y-0">
-          <p className="text-5xl font-bold leading-normal max-[640px]:text-4xl max-[640px]:leading-normal max-[400px]:text-3xl max-[400px]:leading-normal">
+          <p className="text-5xl font-bold leading-normal max-[640px]:text-4xl max-[640px]:leading-normal max-[400px]:text-3xl max-[400px]:leading-normal drop-shadow-md">
             스윗트립,
             <br />
             달콤한 여행을 떠나요!

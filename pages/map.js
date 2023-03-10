@@ -4,7 +4,6 @@ import axios from "axios";
 import KaKaoMap from "../components/map/KakaoMap";
 import MapList from "../components/map/MapList";
 import Detail from "../components/map/Detail";
-import DetailModal from "../components/map/DetailModal";
 
 const Map = ({ data }) => {
   console.log("데이터", data);
@@ -17,7 +16,6 @@ const Map = ({ data }) => {
         <KaKaoMap data={data} />
         {/* <Detail /> */}
         <MapList data={data} />
-        {/* <DetailModal /> */}
       </main>
     </div>
   );
